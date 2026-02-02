@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: inherit;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: inherit;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+h1 {
+  font-size: clamp(1.75rem, 4vw, 3.2em);
+  line-height: 1.2;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s, background-color 0.25s, color 0.25s;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 2px solid #FF7A00;
+  outline-offset: 2px;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased text-gray-800;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto;
+  }
+}
+
+/* Utility for focus visible (accessibility) */
+:focus-visible {
+  outline: 2px solid #FF7A00;
+  outline-offset: 2px;
+}
+
+/* Prevent layout shift from images */
+img[width][height] {
+  height: auto;
+}
+
+/* Responsive typography helper */
+@media (max-width: 640px) {
+  .section-padding {
+    @apply px-4;
+  }
+}
