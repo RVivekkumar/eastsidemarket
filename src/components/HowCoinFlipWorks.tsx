@@ -6,33 +6,47 @@ const steps = [
   {
     id: "01",
     color: "bg-blue-600",
+    buttonColor: "#2563eb",
     title: "Locate the CoinFlip ATM",
     desc: "Find the CoinFlip ATM inside Eastside Market (Valero), 10581 East FWY, Houston TX.",
     action: "Get Direction",
+    to: "/contact",
   },
   {
     id: "02",
     color: "bg-[#FF7A00]",
+    buttonColor: "#FF7A00",
     title: "Select your cryptocurrency",
     desc: "Choose from Bitcoin, Ethereum or other popular cryptocurrencies right from the ATM.",
+    action: "Learn more",
+    to: "/atm",
   },
   {
     id: "03",
     color: "bg-green-600",
+    buttonColor: "#16a34a",
     title: "Verify your phone number",
     desc: "Enter your phone number to receive a quick verification code for security.",
+    action: "Get help",
+    to: "/contact",
   },
   {
     id: "04",
     color: "bg-purple-600",
+    buttonColor: "#9333ea",
     title: "Scan your wallet QR code",
     desc: "Use your crypto wallet app to scan the QR code displayed on the ATM.",
+    action: "Learn more",
+    to: "/atm",
   },
   {
     id: "05",
     color: "bg-green-700",
+    buttonColor: "#15803d",
     title: "Insert cash & receive Bitcoin",
     desc: "Insert your cash — Bitcoin is delivered to your wallet within minutes.",
+    action: "Get Direction",
+    to: "/contact",
   },
 ];
 
@@ -116,13 +130,14 @@ const HowCoinFlipWorks = () => {
                 >
                   {step.id}
                 </div>
-                <div className="bg-white border border-gray-200 rounded-xl p-5 sm:p-6 w-full shadow-sm flex-1 min-w-0">
+                <div className="group bg-white border border-gray-200 rounded-xl p-5 sm:p-6 w-full shadow-sm flex-1 min-w-0 hover:shadow-md transition-shadow">
                   <h4 className="text-base font-medium text-[#0B0E13] mb-2">{step.title}</h4>
                   <p className="text-sm text-gray-500 leading-relaxed">{step.desc}</p>
-                  {step.action && (
+                  {step.action && step.to && (
                     <Link
-                      to="/contact"
-                      className="bg-blue-600 text-white mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
+                      to={step.to}
+                      className="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-white transition-all opacity-100 sm:opacity-0 sm:group-hover:opacity-100 focus:opacity-100 hover:brightness-110"
+                      style={{ backgroundColor: step.buttonColor }}
                     >
                       {step.action}
                       <span aria-hidden>→</span>

@@ -97,7 +97,7 @@ const Services = () => {
               key={s.title}
               variants={item}
               whileHover={{ y: -4, transition: { duration: 0.2 } }}
-              className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow flex flex-col"
+              className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow flex flex-col mt-10"
             >
               {/* Top colored section with wave-like curved bottom */}
               <div

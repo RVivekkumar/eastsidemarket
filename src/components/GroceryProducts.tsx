@@ -49,7 +49,7 @@ export default function GroceryProducts() {
           className="text-center mb-10 sm:mb-16"
         >
           <p className="text-xs sm:text-sm text-[#FF7A00] tracking-widest font-medium">SERVICES</p>
-          <h2 id="grocery-products-heading" className="text-xl sm:text-2xl font-semibold text-[#0B0E13] mt-2">
+          <h2 id="grocery-products-heading" className="text-xl sm:text-2xl font-semibold text-[#0B0E13] mt-2 relative z-10">
             EASTSIDE MARKET – Grocery&apos;s
           </h2>
         </motion.div>
@@ -61,7 +61,7 @@ export default function GroceryProducts() {
           viewport={{ once: true, margin: "-40px" }}
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 relative z-10"
         >
-          <div className="absolute -top-40 -left-10 w-full h-full sm:w-80 sm:h-80 
+          <div className="absolute -top-40 -left-10 w-56 h-56 sm:w-80 sm:h-80 
                opacity-80 bg-no-repeat bg-left-top bg-[length:80%] -z-10"
                style={{ backgroundImage: `url(${Group3})` }}
                aria-hidden
@@ -93,8 +93,8 @@ export default function GroceryProducts() {
               </div>
             </motion.div>
           ))}
-          <div className="absolute -bottom-52 -right-24 w-full h-full sm:w-56 sm:h-56 
-               opacity-80 bg-no-repeat bg-left-top bg-[length:80%] z-10"
+          <div className="absolute bottom-0 md:-bottom-52 -right-24 w-full h-full sm:w-56 sm:h-56 
+               opacity-80 bg-no-repeat bg-left-top bg-[length:80%] -z-10"
                style={{ backgroundImage: `url(${Group3})` }}
                aria-hidden
              />

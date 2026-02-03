@@ -50,7 +50,7 @@ const WhyChooseUs = () => {
             width={600}
             height={400}
           />
-          <div className="absolute -top-16 sm:-top-20 left-4 sm:left-6 flex gap-2 max-w-[45%] sm:max-w-[50%]">
+          <div className="absolute -top-8 sm:-top-20 left-4 sm:left-6 flex gap-2 max-w-[45%] sm:max-w-[50%]">
             <img
               src={getOptimizedImageUrl(decorativeUrl)}
               alt="presentation"

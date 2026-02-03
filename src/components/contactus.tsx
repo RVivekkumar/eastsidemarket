@@ -86,11 +86,11 @@ const Contact = () => {
             viewport={{ once: true }}
             className="w-full lg:w-1/2"
           >
-            <div className="rounded-2xl sm:rounded-[32px] overflow-hidden">
+            <div className="rounded-2xl sm:rounded-[32px] flex justify-center items-center overflow-hidden">
               <img
                 src={getOptimizedImageUrl(CONTACT_IMG)}
                 alt="Eastside Market storefront and contact – visit us in Houston"
-                className="w-8/12 object-cover object-center"
+                className="w-8/12 object-cover object-center mb-5 md:mb-0"
                 loading="lazy"
                 width={600}
                 height={460}

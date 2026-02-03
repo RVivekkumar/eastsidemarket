@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -12,6 +12,14 @@ import About from "./pages/about";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowUp } from "lucide-react";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
 
 export default function App() {
   const [isVisible, setIsVisible] = useState<boolean>(false);
@@ -30,6 +38,7 @@ export default function App() {
   }, []);
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div className="font-sans text-gray-900 min-h-screen flex flex-col overflow-x-hidden">
 
         {/* Common Header */}
@@ -50,7 +59,7 @@ export default function App() {
         {/* Common Footer */}
         <Footer />
         {isVisible && (
-          <div className="fixed bottom-24 right-5 z-50">
+          <div className="fixed bottom-24 right-5 z-[100]">
             <motion.button
               onClick={scrollToTop}
               className="flex items-center justify-center w-10 h-10 text-white bg-[#FF7A00] rounded-full shadow-lg hover:bg-[#e86f00] transition-colors"
