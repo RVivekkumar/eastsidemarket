@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { getOptimizedImageUrl } from "../utils/image";
-
+import landing from "../assets/Landing_Page.png";
+import Group4 from "../assets/Group_4.png";
 import Groceryservice1 from "../assets/Groceryservice_1.png";
 
 const ATM_IMG = "https://res.cloudinary.com/dc6cu8ege/image/upload/v1769684266/Group_1000006510_10_g2kgcy.png";
@@ -52,10 +53,11 @@ const CoinFlipSection = () => {
     >
       {/* Background: diagonal lines pattern (Group_3) */}
       <div
-        className="absolute inset-0 opacity-30 bg-cover bg-no-repeat"
-        style={{ backgroundImage: `url(${Groceryservice1})` }}
+        className="absolute inset-0 opacity-30 bg-cover bg-no-repeat rotate-180"
+        style={{ backgroundImage: `url(${Group4})` }}
         aria-hidden
       />
+    
       {/* Decorative shapes – bottom-left (Groceryservice_1) */}
       <div className="absolute bottom-0 left-0 w-48 sm:w-64 md:w-80 h-40 sm:h-52 md:h-64 opacity-20 pointer-events-none" aria-hidden>
         <img
@@ -66,13 +68,21 @@ const CoinFlipSection = () => {
         />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 space-y-16 md:space-y-24">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 space-y-16 md:space-y-24">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center"
         >
+        <div className="absolute -z-10 top-1/2 right-0 w-48 sm:w-64 md:w-80 h-40 sm:h-52 md:h-64 opacity-80 pointer-events-none" aria-hidden>
+        <img
+          src={landing}
+          alt="icon of the store"
+          className="w-full h-full object-cover object-left-bottom rotate-180"
+          loading="lazy"
+        />
+      </div>
           <div className="flex justify-center items-center gap-2 mb-2">
             <span className="w-6 h-0.5 bg-[#FF7A00]" aria-hidden />
             <span className="text-[#FF7A00] text-sm font-semibold">Services</span>

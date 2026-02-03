@@ -11,6 +11,7 @@ import ecoIcon from "../assets/vector/g3180.png";
 import trustIcon from "../assets/vector/Layer_1.png";
 import Group3 from "../assets/Group_3.png";
 import Groceryservice1 from "../assets/Groceryservice_1.png";
+import landing from "../assets/Landing_Page.png"
 
 const container = {
   hidden: { opacity: 0 },
@@ -187,7 +188,15 @@ const GasStation = () => {
       </section>
 
       {/* Available Fuel Types (Figma: 4 cards with colored icons) */}
-      <section className="py-12 md:py-16 lg:py-20 px-4 sm:px-6 md:px-8 bg-white overflow-hidden">
+      <section className="relative py-12 md:py-16 lg:py-20 px-4 sm:px-6 md:px-8 overflow-hidden">
+         <div className="absolute -z-10 top-0 right-0 w-48 sm:w-64 md:w-80 h-40 sm:h-52 md:h-64 opacity-80 pointer-events-none" aria-hidden>
+        <img
+          src={landing}
+          alt="icon of the store"
+          className="w-full h-full object-cover object-left-bottom rotate-180"
+          loading="lazy"
+        />
+      </div>
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
@@ -273,7 +282,15 @@ const GasStation = () => {
       </section>
 
       {/* Performance (Figma: 2x2 grid, orange icons) */}
-      <section className="py-12 md:py-16 lg:py-20 px-4 sm:px-6 md:px-8 bg-[#F9FAFB] overflow-hidden">
+      <section className="relative py-12 md:py-16 lg:py-20 px-4 sm:px-6 md:px-8 overflow-hidden">
+         <div className="absolute -z-10 top-0 left-0 w-48 sm:w-64 md:w-80 h-40 sm:h-52 md:h-64 opacity-80 pointer-events-none" aria-hidden>
+        <img
+          src={landing}
+          alt="icon of the store"
+          className="w-full h-full object-cover object-left-bottom"
+          loading="lazy"
+        />
+      </div>
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 16 }}

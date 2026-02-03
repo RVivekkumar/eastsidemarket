@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Lock, Percent, CalendarSync } from "lucide-react";
-import Group3 from "../assets/Group_4.png";
 
 const cards = [
   {
@@ -25,15 +24,8 @@ const item = { hidden: { y: 24, opacity: 0 }, visible: { y: 0, opacity: 1 } };
 
 export default function CoinFlipBenefits() {
   return (
-    <section className="py-14 md:py-20 lg:py-24 font-poppins overflow-hidden" aria-labelledby="coinflip-benefits-heading">
-         <div
-            className="absolute inset-0 opacity-80 bg-cover object-bottom bg-no-repeat w-full"
-            style={{ backgroundImage: `url(${Group3})` }}
-            aria-hidden
-          />
-
-
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+    <section className="py-14 md:py-20 lg:py-24 font-poppins" aria-labelledby="coinflip-benefits-heading">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 ">
         <motion.div
           variants={container}
           initial="hidden"
