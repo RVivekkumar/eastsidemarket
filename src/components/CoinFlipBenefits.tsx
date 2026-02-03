@@ -45,7 +45,7 @@ export default function CoinFlipBenefits() {
                   {card.icon}
                 </div>
               </div>
-              <div className="bg-white border border-gray-200 shadow-lg rounded-bl-[2.5rem] rounded-tr-[2.5rem] rounded-tr-lg rounded-bl px-5 pb-5 pt-10 sm:pt-11">
+              <div className="bg-white border border-gray-200 shadow-lg rounded-bl-[2.5rem] rounded-tr-[2.5rem] px-5 pb-5 pt-10 sm:pt-11">
                 <h3 className="text-base font-semibold text-[#0B0E13] mb-3">{card.title}</h3>
                 <p className="text-sm text-gray-600 leading-relaxed max-w-[240px]">{card.desc}</p>
               </div>

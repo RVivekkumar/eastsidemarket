@@ -17,7 +17,7 @@ const Card = ({ icon, title, description, className }: CardProps) => (
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     whileHover={{ y: -4, transition: { duration: 0.2 } }}
-    className={`relative bg-white shadow-lg w-full rounded-bl-[2.5rem] rounded-tl-[2.5rem] rounded-tr-lg rounded-br overflow-visible ${className ?? ""}`}
+    className={`relative bg-white shadow-lg w-full rounded-bl-[2.5rem] rounded-tr-[2.5rem] overflow-visible ${className ?? ""}`}
   >
     <div className="absolute -top-5 sm:-top-6 left-5 z-10 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#FF7A00] flex items-center justify-center shadow-lg border-4 border-white" aria-hidden>
       <span className="text-xl sm:text-2xl">{icon}</span>
